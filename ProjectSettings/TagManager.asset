@@ -50,3 +50,6 @@ TagManager:
   - name: Terrain
     uniqueID: 3089967565
     locked: 0
+  - name: BiggestFront
+    uniqueID: 1250591465
+    locked: 0
