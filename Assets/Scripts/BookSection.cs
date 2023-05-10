@@ -8,6 +8,7 @@ public class BookSection : MonoBehaviour
 {
     public GameObject dialogBox;
     public GameObject questSign;
+    public GameObject leftArrow;
     public TextMeshProUGUI dialogText;
     public string[] dialog;
     private int index;
@@ -67,6 +68,8 @@ public class BookSection : MonoBehaviour
         dialogText.text = "";
         index = 0;
         dialogBox.SetActive(false);
+        leftArrow.SetActive(true);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

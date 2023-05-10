@@ -21,12 +21,6 @@ public class Player : MonoBehaviour
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * 3f, rb.velocity.y);
-
-        //if (Input.GetButtonDown("Jump"))
-        //{
-        //    rb.velocity = new Vector2(0, 7f);
-        //}
-
         AnimationUpdate();
     }
 

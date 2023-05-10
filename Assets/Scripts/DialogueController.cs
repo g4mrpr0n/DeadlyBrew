@@ -20,7 +20,7 @@ public class DialogueController : MonoBehaviour
     private bool hasWaited = false;
     
     private float timer = 0;
-    private readonly float stateChangeTime = 7;
+    private readonly float stateChangeTime = 6;
 
     private void Start()
     {
