@@ -22,6 +22,7 @@ public class DialogueController : MonoBehaviour
     private float timer = 0;
     private readonly float stateChangeTime = 6;
 
+
     private void Start()
     {
         if (DialogueType == 0)

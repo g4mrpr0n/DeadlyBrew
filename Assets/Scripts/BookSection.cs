@@ -68,7 +68,8 @@ public class BookSection : MonoBehaviour
         dialogText.text = "";
         index = 0;
         dialogBox.SetActive(false);
-        leftArrow.SetActive(true);
+        leftArrow.SetActive(true); 
+        
 
     }
 

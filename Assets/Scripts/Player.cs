@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * 3f, rb.velocity.y);
         AnimationUpdate();
+        
     }
 
 
