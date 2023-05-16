@@ -6,27 +6,13 @@ public class ItemPickup : MonoBehaviour
 {
 
     private bool isActive = false;
-    public GameObject leaf;
-    public GameObject water;
-
-    // Update is called once per
-    // 
-
-    void Start()
-    {
-
-    }
+    public GameObject obj;
 
     void Update()
     {
-        if (Input.GetButtonDown("Submit") && isActive && !leaf.activeInHierarchy) // Check if not typing
+        if (Input.GetButtonDown("Submit") && isActive && !obj.activeInHierarchy) // Check if not typing
         {
-            leaf.SetActive(true);
-        }
-
-        if (Input.GetButtonDown("Submit") && isActive && !water.activeInHierarchy) // Check if not typing
-        {
-            water.SetActive(true);
+            obj.SetActive(true);
         }
     }
 
