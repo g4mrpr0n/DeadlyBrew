@@ -7,10 +7,11 @@ public class ItemPickup : MonoBehaviour
 
     private bool isActive = false;
     public GameObject obj;
+    public CollectResult rec;
 
     void Update()
     {
-        if (Input.GetButtonDown("Submit") && isActive && !obj.activeInHierarchy) // Check if not typing
+        if (Input.GetButtonDown("Submit") && isActive && !obj.activeInHierarchy && !rec.recipe1) // Check if not typing
         {
             obj.SetActive(true);
         }
