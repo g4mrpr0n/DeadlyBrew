@@ -7,13 +7,16 @@ public class ItemPickup : MonoBehaviour
 
     private bool isActive = false;
     public GameObject obj;
-    public CollectResult rec;
+    public string str= "HairUI";
+    //public CollectResult rec;
+
+
 
     void Update()
     {
-        if (Input.GetButtonDown("Submit") && isActive && !obj.activeInHierarchy && !rec.recipe1) // Check if not typing
+        if (Input.GetButtonDown("Submit") && isActive  /*!obj.activeInHierarchy && !rec.recipe1*/) // Check if not typing
         {
-            obj.SetActive(true);
+            GameObject.Find("Inventory").transform.Find("InventoryUI").Find(str).gameObject.SetActive(true);
         }
     }
 

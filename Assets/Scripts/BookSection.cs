@@ -10,6 +10,7 @@ public class BookSection : MonoBehaviour
     public GameObject questSign;
     public GameObject leftArrow;
     public TextMeshProUGUI dialogText;
+    public CameraFollow c;
     public string[] dialog;
     private int index;
     public bool dialogActive;
@@ -20,7 +21,10 @@ public class BookSection : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit") && dialogActive && !isTyping) // Check if not typing
         {
+
             questSign.SetActive(false);
+
+
             if (dialogBox.activeInHierarchy)
             {
                 zeroText();
@@ -68,8 +72,7 @@ public class BookSection : MonoBehaviour
         dialogText.text = "";
         index = 0;
         dialogBox.SetActive(false);
-        leftArrow.SetActive(true); 
-        
+        leftArrow.SetActive(true);
 
     }
 

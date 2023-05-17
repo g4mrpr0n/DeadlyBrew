@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -16,18 +17,25 @@ public class NPCDialogue : MonoBehaviour
     public bool conversationEnded = false;
     private bool didntDo = false;
 
+
+
     private void Awake()
     {
         dialogueBoxNPC.SetActive(false);
+        Scene scene = SceneManager.GetActiveScene();
+
         dialogueBoxPlayer.SetActive(false);
+
+
     }
 
     private void Update()
-    {
+
+    { 
         if (Input.GetButtonDown("Submit") && dialogActive && !isTyping) // Check if not typing
         {
-
-
+            
+            
             if ((dialogueBoxNPC.activeInHierarchy || dialogueBoxPlayer.activeInHierarchy) && !conversationEnded)
             {
                 NextLine();

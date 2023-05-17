@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb2d18c890ff8844085fe838bf90208e
+guid: b477a080c6d2d774fa3581f9e88ed6fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle1_0
+      name: Falling_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 800
-        height: 500
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9fe768c29a27dc47b9fd9c1b61d9674
-      internalID: 254140845
+      spriteID: 8c0edcdbd5400bf468f556080eddc499
+      internalID: -1800576277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1_1
+      name: Falling_1
       rect:
         serializedVersion: 2
-        x: 800
+        x: 128
         y: 0
-        width: 800
-        height: 500
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79dbbf69cbcb71e4e905a769fd440b47
-      internalID: 1633535342
+      spriteID: 02cca1807aa6ffe4ea41738a5a76d07e
+      internalID: 1913599444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle1_2
+      name: Falling_2
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 256
         y: 0
-        width: 800
-        height: 500
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,50 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8be54d141b5ee45a85b60fcab21d26
-      internalID: -216954355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle1_3
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 800
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 127a9ded7c36fef479b9d5cf048d7c1c
-      internalID: 2126611761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle1_4
-      rect:
-        serializedVersion: 2
-        x: 3200
-        y: 0
-        width: 800
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc695de4e47342f4e90ff18560e58211
-      internalID: -1630020595
+      spriteID: c9770c7b367fb534a852688b20aacb10
+      internalID: -272036809
       vertices: []
       indices: 
       edges: []
@@ -232,11 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle1_0: 254140845
-      Idle1_1: 1633535342
-      Idle1_2: -216954355
-      Idle1_3: 2126611761
-      Idle1_4: -1630020595
+      Falling_0: -1800576277
+      Falling_1: 1913599444
+      Falling_2: -272036809
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

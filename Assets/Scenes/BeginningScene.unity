@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c98dfb48c94ff0499e1fe8a5fa15fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1821522032}
   myFirstScene: BeginningScene
   mySecondScene: MainGameScene
 --- !u!1 &249458879
@@ -322,7 +323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1250591465
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 49301647b6124f248b54b728b96c0156, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -429,6 +430,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -502,6 +504,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &590746462
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280522768}
   - component: {fileID: 1280522767}
+  - component: {fileID: 1280522769}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -865,6 +901,23 @@ Transform:
   m_Father: {fileID: 1396089463}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280522769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280522766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774c8205cc084f344ac764c16ffa71e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1280522768}
+  smoothing: 0
+  maxPos: {x: 0, y: 0}
+  minPos: {x: 0, y: 0}
+  saw: 0
 --- !u!1 &1313647587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1.5
+  m_ScaleFactor: 0.9
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -1530,6 +1583,7 @@ MonoBehaviour:
   questSign: {fileID: 400061628}
   leftArrow: {fileID: 590746462}
   dialogText: {fileID: 1313647589}
+  c: {fileID: 1280522769}
   dialog:
   - "12 drops? Oh no, I added 21 of them! Must\u2019ve been a deadly dose! Here\u2019s
     a resurrection potion. Where\u2019s the rest of the recipe???"

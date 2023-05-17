@@ -8,10 +8,16 @@ public class MainMovement : MonoBehaviour
     Vector2 movement;
     public float moveSpeed = 3f;
 
-    public GameObject Inventory;
+    private GameObject Inventory;
 
     public Animator animator;
     // Update is called once per frame
+
+    private void Start()
+    {
+        Inventory = GameObject.Find("Inventory").transform.Find("InventoryUI").gameObject;
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
