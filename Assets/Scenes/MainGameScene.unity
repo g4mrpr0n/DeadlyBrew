@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &125771352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &184809327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &277203536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2002,6 +2002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBoxNPC: {fileID: 297037893}
   dialogueBoxPlayer: {fileID: 1002561305}
+  hair: {fileID: 1756424375}
+  claw: {fileID: 0}
   dialogueTextNPC: {fileID: 1718123287}
   dialogueTextPlayer: {fileID: 1994683671}
   dialoguePlayer:
@@ -2023,6 +2025,23 @@ MonoBehaviour:
     make it out alive.
   convoEnd:
   - ' You''re still here? I already stated my conditions.'
+  dialogue1Pl:
+  - It was a little bit difficult, but here it is. I've brought back the lock of
+    hair.
+  - Thank you. Is this by any chance a lock from a unicorn's mane?
+  - I'd like to keep it, if you don't mind. I really need to brew that potion, because
+    I did something horrible to someone dear to me...
+  - Thank you so much!! I will never forget you. I'm glad you were reasonable with
+    me.
+  dialogue1NPC:
+  - I see you returned. I hope you're not empty-handed.
+  - Impressive work, young one. I'm happy to see that there are still worthy witches
+    in this land.
+  - Sure is. Sunrays was a brave and wonderful companion of mine. We were unstoppable,
+    and everyone feared us.
+  - I can understand your sorrow. Very well, you may keep it, and here's the claw.
+    I hope it will undo your mistake.
+  - 'Safe travels, young one. '
   dialogActive: 0
   wordSpeed: 0.05
   conversationEnded: 0
@@ -2820,7 +2839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &619088922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3058,7 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &638416811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3260,7 +3279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &701177058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4233,7 +4252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &834382994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4385,7 +4404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &841053739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4622,7 +4641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &916179280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4855,7 +4874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &998519339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5527,7 +5546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1080520123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5653,7 +5672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1089838374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6251,7 +6270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &1148917881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7375,7 +7394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1321828702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7613,7 +7632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1355065705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7851,7 +7870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1388669376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7977,7 +7996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1442229994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8673,7 +8692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1445143694}
-  str: HairUI
+  str: WaterUI
 --- !u!212 &1646560390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9323,7 +9342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727636130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.71, y: 18.23, z: 0}
+  m_LocalPosition: {x: 5, y: -4.34, z: 0}
   m_LocalScale: {x: 1.5325431, y: 1.5574361, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9344,7 +9363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1727636133}
   moveSpeed: 3
-  Inventory: {fileID: 831857782}
   animator: {fileID: 1727636138}
 --- !u!95 &1727636138
 Animator:
@@ -9414,7 +9432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &1755982756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10668,7 +10686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &1972302059
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11094,6 +11112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBoxNPC: {fileID: 1919676447}
   dialogueBoxPlayer: {fileID: 810161403}
+  hair: {fileID: 0}
+  claw: {fileID: 0}
   dialogueTextNPC: {fileID: 1237436256}
   dialogueTextPlayer: {fileID: 1191082342}
   dialoguePlayer:
@@ -11120,6 +11140,8 @@ MonoBehaviour:
   - Good. Remember, magic is not something to be taken lightly.
   convoEnd:
   - ' Good luck to you. Remember, magic is not something to be taken lightly.'
+  dialogue1Pl: []
+  dialogue1NPC: []
   dialogActive: 0
   wordSpeed: 0.05
   conversationEnded: 0
@@ -11641,7 +11663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!212 &2102577594
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11874,7 +11896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1180356631}
-  str: HairUI
+  str: LeafUI
 --- !u!61 &2123241353
 BoxCollider2D:
   m_ObjectHideFlags: 0

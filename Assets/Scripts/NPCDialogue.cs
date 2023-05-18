@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public GameObject dialogueBoxNPC, dialogueBoxPlayer;
+    public GameObject dialogueBoxNPC, dialogueBoxPlayer, hair, claw;
     public TextMeshProUGUI dialogueTextNPC, dialogueTextPlayer;
-    public string[] dialoguePlayer, dialogueNPC, convoEnd;
+    public string[] dialoguePlayer, dialogueNPC, convoEnd, dialogue1Pl, dialogue1NPC;
+    private string str = "HairUI", str1 = "ClawUI";
     
     private int index=0;
     private bool isNPCSpeaking = true; // Flag variable to track if it's currently the NPC's turn to speak
@@ -16,22 +17,31 @@ public class NPCDialogue : MonoBehaviour
     private bool isTyping = false; // Flag variable to track if a sentence is being typed
     public bool conversationEnded = false;
     private bool didntDo = false;
+    private bool finishingConvo = false;
+    private GameObject Inventory;
+    private GameObject InventoryCanvas;
 
 
+    private void Start()
+    {
+        hair = GameObject.Find("Inventory").transform.Find("InventoryUI").Find(str).gameObject;
+        claw = GameObject.Find("Inventory").transform.Find("InventoryUI").Find(str1).gameObject;
+    }
 
     private void Awake()
     {
         dialogueBoxNPC.SetActive(false);
-        Scene scene = SceneManager.GetActiveScene();
-
         dialogueBoxPlayer.SetActive(false);
 
 
     }
 
     private void Update()
-
     { 
+        if (hair.activeInHierarchy)
+        {
+            finishingConvo = true;
+        }
         if (Input.GetButtonDown("Submit") && dialogActive && !isTyping) // Check if not typing
         {
             
@@ -40,15 +50,26 @@ public class NPCDialogue : MonoBehaviour
             {
                 NextLine();
             }
-            else if (isNPCSpeaking && index < dialogueNPC.Length && !conversationEnded)
+            else if (isNPCSpeaking && index < dialogueNPC.Length && !conversationEnded &&!finishingConvo)
             {
                 dialogueBoxNPC.SetActive(true);
                 StartCoroutine(Typing(dialogueNPC, dialogueTextNPC));
             }
-            else if (!isNPCSpeaking && index < dialoguePlayer.Length && !conversationEnded)
+            else if (isNPCSpeaking && index < dialogue1NPC.Length && !conversationEnded && finishingConvo)
+            {
+                dialogueBoxNPC.SetActive(true);
+                StartCoroutine(Typing(dialogue1NPC, dialogueTextNPC));
+
+            }
+            else if (!isNPCSpeaking && index < dialoguePlayer.Length && !conversationEnded && !finishingConvo)
             {
                 dialogueBoxPlayer.SetActive(true);
                 StartCoroutine(Typing(dialoguePlayer, dialogueTextPlayer));
+            }
+            else if (!isNPCSpeaking && index < dialogue1Pl.Length && !conversationEnded && finishingConvo)
+            {
+                dialogueBoxPlayer.SetActive(true);
+                StartCoroutine(Typing(dialogue1Pl, dialogueTextPlayer));
             }
             else if (conversationEnded && !dialogueBoxNPC.activeInHierarchy)
             {
@@ -57,6 +78,10 @@ public class NPCDialogue : MonoBehaviour
             }
             else
             {
+                if (finishingConvo)
+                {
+                    claw.SetActive(true);
+                }
                 EndDialogue();
             }
             
@@ -91,16 +116,22 @@ public class NPCDialogue : MonoBehaviour
     {
         if (!isTyping) // Check if not typing
         {
-            if (isNPCSpeaking && index < dialogueNPC.Length)
+            if (isNPCSpeaking && index < dialogueNPC.Length && !finishingConvo)
             {
                 dialogueBoxPlayer.SetActive(false); // Hide player dialogue box
                 dialogueBoxNPC.SetActive(true); // Show NPC dialogue box
                 dialogueTextNPC.text = ""; // Clear NPC dialogue text
                 StartCoroutine(Typing(dialogueNPC, dialogueTextNPC));
 
-
             }
-            else if (!isNPCSpeaking && index < dialoguePlayer.Length)
+            else if (isNPCSpeaking && index < dialogue1NPC.Length && finishingConvo)
+            {
+                dialogueBoxPlayer.SetActive(false); // Hide player dialogue box
+                dialogueBoxNPC.SetActive(true); // Show NPC dialogue box
+                dialogueTextNPC.text = ""; // Clear NPC dialogue text
+                StartCoroutine(Typing(dialogue1NPC, dialogueTextNPC));
+            }
+            else if (!isNPCSpeaking && index < dialoguePlayer.Length && !finishingConvo)
             {
                 dialogueBoxPlayer.SetActive(true); // Show player dialogue box
                 dialogueBoxNPC.SetActive(false); // Hide NPC dialogue box
@@ -110,8 +141,21 @@ public class NPCDialogue : MonoBehaviour
 
                 index++;
             }
+            else if (!isNPCSpeaking && index < dialogue1Pl.Length && finishingConvo)
+            {
+                dialogueBoxPlayer.SetActive(true); // Show player dialogue box
+                dialogueBoxNPC.SetActive(false); // Hide NPC dialogue box
+                dialogueTextPlayer.text = ""; // Clear player dialogue text
+                StartCoroutine(Typing(dialogue1Pl, dialogueTextPlayer));
+                index++;
+            }
+            
             else
             {
+                if (finishingConvo)
+                {
+                    claw.SetActive(true);
+                }
                 conversationEnded = true;
                 EndDialogue();
             }

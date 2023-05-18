@@ -247,9 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c98dfb48c94ff0499e1fe8a5fa15fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1821522032}
   myFirstScene: BeginningScene
   mySecondScene: MainGameScene
+  myThirdScene: PuzzleScene
+  coll: 0
 --- !u!1 &249458879
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +918,6 @@ MonoBehaviour:
   smoothing: 0
   maxPos: {x: 0, y: 0}
   minPos: {x: 0, y: 0}
-  saw: 0
 --- !u!1 &1313647587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,8 +1629,8 @@ GameObject:
   - component: {fileID: 1821522035}
   - component: {fileID: 1821522034}
   - component: {fileID: 1821522033}
-  - component: {fileID: 1821522037}
   - component: {fileID: 1821522038}
+  - component: {fileID: 1821522039}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -1672,7 +1672,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00581491, y: -0.08037996}
+  m_Offset: {x: 0.00581491, y: -0.08412199}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1683,7 +1683,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4125923, y: 0.6662532}
+  m_Size: {x: 0.4125923, y: 0.6737373}
   m_EdgeRadius: 0
 --- !u!212 &1821522035
 SpriteRenderer:
@@ -1745,25 +1745,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821522032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.43, y: -1.78, z: 0}
+  m_LocalPosition: {x: -2.43, y: -1.83, z: 0}
   m_LocalScale: {x: 2.4302936, y: 2.6880155, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1821522037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821522032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60bcb1146e39104ca5e9433e3ba7816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1821522038
 Animator:
   serializedVersion: 5
@@ -1785,6 +1773,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1821522039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821522032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726b9ece473a46349a0136df616cc006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1891379933
 GameObject:
   m_ObjectHideFlags: 0

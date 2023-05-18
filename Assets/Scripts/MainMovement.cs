@@ -9,13 +9,15 @@ public class MainMovement : MonoBehaviour
     public float moveSpeed = 3f;
 
     private GameObject Inventory;
+    private GameObject InventoryCanvas;
 
     public Animator animator;
     // Update is called once per frame
 
     private void Start()
     {
-        Inventory = GameObject.Find("Inventory").transform.Find("InventoryUI").gameObject;
+        InventoryCanvas = GameObject.Find("Inventory");//.transform.Find("InventoryUI").gameObject;
+        Inventory = InventoryCanvas.transform.Find("InventoryUI").gameObject;
     }
 
     void Update()
@@ -33,13 +35,18 @@ public class MainMovement : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
         if (Input.GetKeyDown("f") && Inventory.activeInHierarchy)
+        {
             Inventory.SetActive(false);
+        }
         else if (Input.GetKeyDown("f") && !Inventory.activeInHierarchy)
+        {
+            InventoryCanvas.GetComponent<Canvas>().worldCamera = Camera.main;
             Inventory.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized* moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
